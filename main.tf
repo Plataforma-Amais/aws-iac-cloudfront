@@ -106,8 +106,8 @@ resource "aws_iam_policy" "iam_user_policy" {
           "s3:DeleteObject",
           "s3:GetObject",
           "s3:GetObject*",
-          "ListObjectsV2",
-          "ListObject*",
+          "s3:ListObjectsV2",
+          "s3:ListObject*",
           "s3:PutObject",
           "s3:PutObjectAcl"
         ],
