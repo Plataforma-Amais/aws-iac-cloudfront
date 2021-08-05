@@ -103,13 +103,22 @@ resource "aws_iam_policy" "iam_user_policy" {
         "Sid" : "AllowReadAndWrite",
         "Effect" : "Allow",
         "Action" : [
-          "s3:DeleteObject",
-          "s3:GetObject",
-          "s3:GetObject*",
-          "s3:ListObjectsV2",
-          "s3:ListObject*",
+          "s3:DeleteObjectTagging",
+          "s3:GetObjectVersionTagging",
+          "s3:ReplicateTags",
+          "s3:RestoreObject",
+          "s3:PutObjectVersionTagging",
+          "s3:DeleteObjectVersionTagging",
+          "s3:ListMultipartUploadParts",
+          "s3:ReplicateObject",
           "s3:PutObject",
-          "s3:PutObjectAcl"
+          "s3:GetObjectAcl",
+          "s3:GetObject",
+          "s3:GetObjectVersionAcl",
+          "s3:GetObjectTagging",
+          "s3:PutObjectTagging",
+          "s3:DeleteObject",
+          "s3:GetObjectVersion"
         ],
         "Resource" : "${module.s3_bucket_for_application_cf_client.s3_bucket_arn}/*"
       },
