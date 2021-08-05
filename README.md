@@ -1,6 +1,6 @@
-# A+ CloudFront Distribution solution
+# A+ CloudFront distribution solution
 
-Plataforma A+ terraform modude for create a CloudFront Distribution.
+A Plataforma A+ terraform module for create a complete CloudFront distribution solution.
 
 ## Example Usage
 
@@ -22,8 +22,8 @@ Command line:
 
 Module:
 
-    module "cf_module" {
-      source  = "terraform-aws-modules/s3-bucket/aws"
+    module "cloudfront" {
+      source  = "git::https://github.com/Plataforma-Amais/aws-iac-cloudfront?ref=v0.1.0"
       # insert the 5 required variables here
     }
 
