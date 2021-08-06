@@ -139,6 +139,7 @@ resource "aws_iam_policy" "iam_user_policy" {
         "Effect" : "Allow",
         "Action" : [
           "cloudfront:ListInvalidations",
+          "cloudfront:GetDistribution",
           "cloudfront:GetInvalidation",
           "cloudfront:CreateInvalidation"
         ],
