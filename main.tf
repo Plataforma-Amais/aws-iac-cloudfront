@@ -114,7 +114,7 @@ resource "aws_iam_policy" "iam_user_policy" {
           "s3:GetObject",
           "s3:GetObjectAcl",
           "s3:GetObjectTagging",
-          "s3:GetObjectVersion"
+          "s3:GetObjectVersion",
           "s3:GetObjectVersionAcl",
           "s3:GetObjectVersionTagging",
           "s3:ListBucket",
@@ -127,7 +127,7 @@ resource "aws_iam_policy" "iam_user_policy" {
           "s3:PutObjectVersionTagging",
           "s3:ReplicateObject",
           "s3:ReplicateTags",
-          "s3:RestoreObject",
+          "s3:RestoreObject"
         ],
         "Resource" : [
           module.s3_bucket_for_application_cf_client.s3_bucket_arn,
